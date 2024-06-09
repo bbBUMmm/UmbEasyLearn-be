@@ -27,7 +27,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
-        <spring-boot-maven-plugin.version>3.2.8</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>3.2.4</spring-boot-maven-plugin.version> <!-- Change here -->
         <jib-maven-plugin.version>3.3.0</jib-maven-plugin.version>
     </properties>
 
@@ -48,6 +48,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-maven-plugin.version}</version> <!-- Change here -->
                 <configuration>
                     <excludes>
                         <exclude>
@@ -57,10 +58,11 @@
                     </excludes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>3.4.1</version>
+                <version>${jib-maven-plugin.version}</version>
                 <configuration>
                     <from>
                         <image>eclipse-temurin:21.0.2_13-jdk</image>
