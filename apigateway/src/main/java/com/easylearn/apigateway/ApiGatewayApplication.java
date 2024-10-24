@@ -10,7 +10,8 @@ import org.springframework.web.filter.CorsFilter;
 @SpringBootApplication
 public class ApiGatewayApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		Thread.sleep(30000);
 		SpringApplication.run(ApiGatewayApplication.class, args);
 	}
 	@Bean

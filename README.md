@@ -1,11 +1,14 @@
 # UmbEasyLearn-be
-Pre spustenie aplikacie treba spustit servisy v tomto poradi: 
-1) Config Service
-2) Discovery
-3) Identity
-4) ApiGateway
-5) Subjetsmsc
-6) Usermcs
 
+To run an application you need to build each service:
 
-Pre pripojenie do databazy treba vložiť connection string.
+1) `cd apigateway`, `mvn clean install -DskipTests`
+2) `cd cofig-server`, `mvn clean install -DskipTests`
+3) ...
+4) `cd usermicroservice`, `mvn clean install -DskipTests`
+
+Run docker-compose:
+
+`docer compose up`
+
+The project is provided with the connection string to the database

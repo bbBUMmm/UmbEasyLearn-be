@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class IdentityServiceApplication {
 
 	public static void main(String[] args) {
+		Thread.sleep(45000);
 		SpringApplication.run(IdentityServiceApplication.class, args);
 	}
 
